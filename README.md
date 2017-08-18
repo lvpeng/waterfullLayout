@@ -20,4 +20,48 @@
     }
  ```
 
- 5. 通过对img元素 添加 `Object-fit:cover`属性，可以让图片拉伸问题
+ 5. 通过对img元素 添加 `object-fit:cover`属性，对图片做适当的裁剪，防止图片拉伸ugly（相当于 `background-clip`）
+
+ 6. 修改布局，添加cover弹层DOM 和 `hover` 交互效果
+```css
+    .toast{
+            position: absolute;
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .toast:hover{
+            background: rgba(77,77,77,0.3);
+        }
+        .toast:hover .title{
+            height: 40px;
+        }
+        .title{
+            background: rgba(0,0,0,0.5);
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            color:white;
+            line-height: 40px;
+            height: 0;
+            text-align: center;
+            padding: 0 10px;
+        }
+```
+
+7. `transition`属性 为弹层添加「移入移出」动画效果
+
+8. 为末尾添加div伪类， 让最后一行图片**左对齐， 并且不被拉伸**
+
+9. 优化细节处理: 文字裁剪，防止长
+```css
+    title{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+```
+
+10. 借助GithubPages， 部署demo
