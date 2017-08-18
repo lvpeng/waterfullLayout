@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>waterfull layout</title>
+    <style>
+        section {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        section::after{
+            content: " ";
+            flex-grow: 9999;
+        }
+        .img-wrapper{
+            flex-grow: 1;
+            margin: 2px;
+            position: relative;
+        }
+        img {
+            min-width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .toast{
+            position: absolute;
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transition: all 1s;
+        }
+        .toast:hover{
+            background: rgba(77,77,77,0.3);
+        }
+        .toast:hover .title{
+            height: 40px;
+            transition: all 0.5s;
+        }
+        .title{
+            background: rgba(0,0,0,0.5);
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            color:white;
+            line-height: 40px;
+            height: 0;
+            text-align: center;
+            padding: 0 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="img-wrapper">
+            <img src="image/1.webp" alt="" />
+            <div class="toast">
+                <div class="title">神偷奶爸</div>
+            </div>
+        </div>
+        <div class="img-wrapper">
+            <img src="image/2.webp" alt="" />
+            <div class="toast">
+                <div class="title">这是一个很长的很长的很长的很长的很长的很长的电影名字是</div>
+            </div>
+        </div>
+        <div class="img-wrapper">
+            <img src="image/3.webp" alt="" />
+            <div class="toast">
+                <div class="title">movie name</div>
+            </div>
+        </div>
+        <div class="img-wrapper">
+            <img src="image/4.webp" alt="" />
+            <div class="toast">
+                <div class="title">movie name</div>
+            </div>
+        </div>
+        <div class="img-wrapper">
+            <img src="image/5.webp" alt="" />
+            <div class="toast">
+                <div class="title">movie name</div>
+            </div>
+        </div>
+        <div class="img-wrapper">
+            <img src="image/6.webp" alt="" />
+            <div class="toast">
+                <div class="title">movie name</div>
+            </div>
+        </div>
+        <div class="img-wrapper">
+            <img src="image/7.webp" alt="" />
+            <div class="toast">
+                <div class="title">movie name</div>
+            </div>
+        </div>
+        <div class="img-wrapper">
+            <img src="image/8.webp" alt="" />
+            <div class="toast">
+                <div class="title">movie name</div>
+            </div>
+        </div>
+        <div class="img-wrapper">
+            <img src="image/9.webp" alt="" />
+            <div class="toast">
+                <div class="title">movie name</div>
+            </div>
+        </div>
+        <div class="img-wrapper">
+            <img src="image/10.webp" alt="" />
+            <div class="toast">
+                <div class="title">movie name</div>
+            </div>
+        </div>
+        <div class="img-wrapper">
+            <img src="image/11.webp" alt="" />
+            <div class="toast">
+                <div class="title">movie name</div>
+            </div>
+        </div>
+        <div class="img-wrapper">
+            <img src="image/12.webp" alt="" />
+            <div class="toast">
+                <div class="title">movie name</div>
+            </div>
+        </div>
+        <div class="img-wrapper">
+            <img src="image/13.webp" alt="" />
+            <div class="toast">
+                <div class="title">movie name</div>
+            </div>
+        </div>
+        <div class="img-wrapper">
+            <img src="image/14.webp" alt="" />
+            <div class="toast">
+                <div class="title">movie name</div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
